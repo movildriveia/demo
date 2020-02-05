@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Movildrive te ofrece una App para empresas PYMES y particulares donde podrás alquilar Vehículos de movilidad eléctrica con Cero emisiones. ¡Descárgala YA!">
+  <meta name="author" content="Movildrive">
+  <meta name="keywords" content="Movilidad Eléctrica Empresas, Alquiler Furgonetas Eléctricas">
+  <meta name="description" content="Movilidad Eléctrica para Autónomos, PYMES y Particulares">
+  <meta name="robots" content="follow">
+  <meta name="googlebot" content="index">
+
+  <title>Prueba Movildrive Fleet Manager</title>
+
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="css/themify-icons.css">
+  <link rel="stylesheet" href="css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Montserrat:300,300i,400,400i,700,700i" >
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+  <!-- end plugins:css -->
+
+  <!-- favicon -->
+  <link rel="icon" href="image/favicon.png" />
+
+  <!-- canonical -->
+  <link rel="canonical" href="https://movildrive.com">
+
+</head>
+
+<body class="sidebar-dark">
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRR6LGL"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="container-scroller">
+
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/navbar -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="ti-location-pin menu-icon"></i>
+              <span class="menu-title">Inicio</span>
+            </a>
+          </li>
+          <li class="nav-item" >
+            <a class="nav-link" href="#" onclick="reporte_mapa(); return false;">
+              <i class="ti-map-alt menu-icon"></i>
+              <span class="menu-title">Mapa</span>
+            </a>
+          </li>
+          <li class="nav-item" >
+            <a class="nav-link" onclick="locateMarkersCars()" data-toggle="collapse" href="#form-elements2" aria-expanded="false" aria-controls="form-elements">
+              <i class="ti-truck menu-icon"></i>
+              <span class="menu-title" >My Fleet</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="form-elements2">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" onclick="locateMarkersCars()">EVs</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="locateMarkersScooters()">eScooters</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="locateMarkersKickScooters()">KickScooters</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="locateMarkersTrucks()">eTrucks & Vans</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="locateMarkersBikes()">eBikes</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="locateMarkersTaxis()">VTCs & Taxi</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#form-elements3" aria-expanded="false" aria-controls="form-elements">
+              <i class="ti-plug menu-icon"></i>
+              <span class="menu-title">Estado de Baterías</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="form-elements3">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" onclick="locateMarkers33()">Batería Baja</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="locateMarkers66()">Batería Media</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="locateMarkers99()">Batería Alta</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#form-elements4" aria-expanded="false" aria-controls="form-elements">
+              <i class="ti-headphone-alt menu-icon"></i>
+              <span class="menu-title">Assitance</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="form-elements4">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" onclick="locateMarkersAssistance()">En Asistencia</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="locateMarkersFixing()">En Reparación</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="locateMarkersGarages()">En Taller</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="locateMarkersPaint()">hapa y Pintura</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#form-elements5" aria-expanded="false" aria-controls="form-elements">
+              <i class="ti-home menu-icon"></i>
+              <span class="menu-title">Rent-a-Car</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="form-elements5">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" onclick="locatePickUpOffice()">Pick-Up Office</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="locatePickOffOffice()">Drop-Off Office</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="locatePickUpOffice()">Pick-Up Date</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="locatePickOffOffice()">Drop-Off Date</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#form-elements6" aria-expanded="false" aria-controls="form-elements">
+              <i class="ti-package menu-icon"></i>
+              <span class="menu-title">Logistics</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="form-elements6">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" onclick="Delivery1()">Ruta Delivery-1</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="Delivery2()">Ruta Logistics-2</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="Delivery3()">Ruta Transports-3</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="Delivery4()">Ruta Traffic-4</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="reporte_kilometros();">
+              <i class="ti-dashboard menu-icon"></i>
+              <span class="nav-item">Kilómetros/Miles</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">
+              <i class="ti-rss-alt menu-icon"></i>
+              <span class="menu-title">Notificar a Usuario</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="" aria-expanded="false" aria-controls="e-commerce">
+              <i class="ti-credit-card menu-icon"></i>
+              <span class="menu-title">Pagos</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="" aria-expanded="false" aria-controls="e-commerce">
+              <i class="ti-bar-chart menu-icon"></i>
+              <span class="menu-title">Facturación Mensual</span>
+            </a>
+            <div class="collapse" id="e-commerce">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href=""> Factura Tipo </a></li>
+                <li class="nav-item"> <a class="nav-link" href=""> Tabla de Precios </a></li>
+                <li class="nav-item"> <a class="nav-link" href=""> Pedidos </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">
+              <i class="ti-settings menu-icon"></i>
+              <span class="menu-title">Configuración</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">
+              <i class="ti-write menu-icon"></i>
+              <span class="menu-title">API Movildrive</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">
+              <i class="ti-harddrives menu-icon"></i>
+              <span class="menu-title">Datos</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">
+              <i class="ti-import menu-icon"></i>
+              <span class="menu-title">Descargar Datos</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.php">
+              <i class="ti-power-off menu-icon"></i>
+              <span class="menu-title">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+					<div class="row">
+              <!--Ventana de Inicio -->
+              <div id="marco_inicio" class="card-body">
+                <div class="jumbotron text-center ">
+                  <img src="image/logo-mini.svg" width="80px" align="center">
+                  <h2> Gestor de Flotas de Movil Drive</h2>
+                  <p> Llevando a otro nivel el control y la eficiencia de sus operaciones
+                </div>
+              </div>
+              <!--Ventana de Mapa -->
+              <div id="marco_mapa" class="card-body" style="display:none">
+                <h6 class="card-title" style="text-align:center">
+                <img src="image/logo-mini.svg" width="40px"> - Fleet Management Movildrive</h6>
+                <div class="map-container">
+                  <div id="map" class="google-map"></div>
+                </div>
+                <div class="map-data">
+                  <div id="map-datos"></div>
+                </div>
+                <div><button onclick="fill_map()">actualiza</button></div>
+              </div>
+              <!--Ventana de Mapa -->
+              <div id="marco_informe" class="card-body" style="display:none">
+                <div id="informe">
+                  <canvas id="kilometros_recorridos" width="auto" height="auto" style="background-color: #fff;"></canvas>
+                </div>
+              </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+
+        <!-- partial:../../partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright Movildrive © 2020. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="ti-heart text-danger ml-1"></i> by Movildrive (Yuver & Alberto).</span>
+          </div>
+        </footer>
+        <!-- partial -->
+
+      </div>
+      <!-- main-panel ends -->
+
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- inject:js -->
+  <script src="js/vendor.bundle.base.js"></script>
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/todolist.js"></script>
+
+  <!-- endinject -->
+
+	<!-- Custom js for this page-->
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfsexfdhtL_hR8IFCcb8pXQvgSfF4cuHQ&callback=initMap">
+  </script>
+  <script src="js/google-maps.js"></script>
+  <script src="js/dist/Chart.js"></script>
+  <script src="js/complete.js"></script>
+
+  <!-- End custom js for this page-->
+
+</body>
+
+</html>

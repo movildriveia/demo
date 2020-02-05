@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #E6E6E6;
+  height: 100vh;
+}
+
+#login {
+  margin-top: 120px;
+  max-width: 320px;
+  height: 370px;
+  border: 1px solid #585858;
+  background-color: #FFFFFF;
+  align-content: center;
+  display: block;
+}
+
+#sesion_anfitrion {
+  margin-top: 80px;
+  max-width: 320px;
+  height: 320px;
+  border: 1px solid #585858;
+  background-color: #FFFFFF;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
